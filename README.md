@@ -25,6 +25,7 @@ This project defines a Kubernetes CronJob that pulls node metrics like CPU, memo
    kubectl apply -f cronjob.yaml
    kubectl apply -f pv.yaml
    kubectl apply -f pvc.yaml
+   kubectl apply -f debug-pod.yaml
    ```
 
 3. Access the debug pod
