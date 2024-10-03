@@ -38,4 +38,5 @@ This project defines a Kubernetes CronJob that pulls node metrics like CPU, memo
     ```
     kubectl exec -it debug-pod -- /bin/sh
     cd /mnt/pv
+    ls
     ```
