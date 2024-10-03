@@ -29,9 +29,9 @@ This project defines a Kubernetes CronJob that pulls node metrics like CPU, memo
 
 2. Deploy the Kubernetes object
    ```
-   Kubectl apply -f cronjob.yaml
-   Kubectl apply -f pv.yaml
-   Kubectl apply -f pvc.yaml
+   kubectl apply -f cronjob.yaml
+   kubectl apply -f pv.yaml
+   kubectl apply -f pvc.yaml
    ```
 
 3. Access the debug pod
