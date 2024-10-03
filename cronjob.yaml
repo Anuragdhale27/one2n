@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: node-metrics-collector
+spec:
+  schedule: "*/1 * * * *"  
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: metrics-collector
+            image: 27300627/metrics-collector:latest
+            volumeMounts:
+            - name: metrics-volume
+              mountPath: /metrics
+            env:
+            - name: NODE_EXPORTER_HOST
+              value: "localhost"  
+          restartPolicy: OnFailure
+          volumes:
+          - name: metrics-volume
+            hostPath:
+              path: /mnt/data/metrics 
+              type: DirectoryOrCreate
+
